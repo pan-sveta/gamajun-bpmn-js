@@ -1,0 +1,28 @@
+{
+  "name": "gamajun-bpmn-js",
+  "version": "1.0.2",
+  "description": "Custom bpmn-js bundler for gamajun project",
+  "main": "index.html",
+  "repository": "https://github.com/pan-sveta/gamajun-bpmn-js",
+  "author": "Filip Štěpánek",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "all": "run-s bundle open",
+    "build": "rollup -c",
+    "open": "opn ./index.html",
+    "prepublish": "yarn build"
+  },
+  "dependencies": {
+    "bpmn-js": "^9.4.1",
+    "diagram-js": "^8.9.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.2",
+    "opn-cli": "^1.0.0",
+    "rollup": "^0.57.1",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.3.0"
+  }
+}
