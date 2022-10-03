@@ -1,6 +1,6 @@
 {
   "name": "gamajun-bpmn-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Custom bpmn-js bundler for gamajun project",
   "main": "index.html",
   "repository": "https://github.com/pan-sveta/gamajun-bpmn-js",
