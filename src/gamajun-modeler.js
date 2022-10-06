@@ -4,6 +4,7 @@ import Modeler from 'bpmn-js/lib/Modeler';
 
 import ZoomScrollModule from 'diagram-js/lib/navigation/zoomscroll';
 import MoveCanvasModule from 'diagram-js/lib/navigation/movecanvas';
+import KeyboardBindings from 'diagram-js/lib/features/keyboard';
 
 import CustomLoggingModule from './features/logging';
 
@@ -22,6 +23,7 @@ inherits(CustomModeler, Modeler);
 CustomModeler.prototype._customModules = [
   ZoomScrollModule,
   MoveCanvasModule,
+  KeyboardBindings,
   CustomLoggingModule
 ];
 
