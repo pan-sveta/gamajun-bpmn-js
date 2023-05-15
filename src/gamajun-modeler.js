@@ -5,6 +5,7 @@ import Modeler from 'bpmn-js/lib/Modeler';
 import ZoomScrollModule from 'diagram-js/lib/navigation/zoomscroll';
 import MoveCanvasModule from 'diagram-js/lib/navigation/movecanvas';
 import KeyboardBindings from 'diagram-js/lib/features/keyboard';
+import TouchModule from 'diagram-js/lib/features/touch';
 
 import CustomLoggingModule from './features/logging';
 
@@ -15,19 +16,20 @@ import CustomLoggingModule from './features/logging';
  * @param {Object} options
  */
 export default function CustomModeler(options) {
-  Modeler.call(this, options);
+    Modeler.call(this, options);
 }
 
 inherits(CustomModeler, Modeler);
 
 CustomModeler.prototype._customModules = [
-  ZoomScrollModule,
-  MoveCanvasModule,
-  KeyboardBindings,
-  CustomLoggingModule
+    ZoomScrollModule,
+    MoveCanvasModule,
+    KeyboardBindings,
+    TouchModule,
+    CustomLoggingModule
 ];
 
 CustomModeler.prototype._modules = [].concat(
-  Modeler.prototype._modules,
-  CustomModeler.prototype._customModules
+    Modeler.prototype._modules,
+    CustomModeler.prototype._customModules
 );

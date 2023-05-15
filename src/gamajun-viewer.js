@@ -4,6 +4,7 @@ import Viewer from "bpmn-js/lib/Viewer";
 
 import ZoomScrollModule from 'diagram-js/lib/navigation/zoomscroll';
 import MoveCanvasModule from 'diagram-js/lib/navigation/movecanvas';
+import TouchModule from 'diagram-js/lib/features/touch';
 
 import CustomLoggingModule from './features/logging';
 
@@ -22,6 +23,7 @@ inherits(CustomViewer, Viewer);
 CustomViewer.prototype._customModules = [
     ZoomScrollModule,
     MoveCanvasModule,
+    TouchModule,
     CustomLoggingModule
 ];
 
